@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Sparkle appcast for Ensemble.
+
+  Intentionally empty: a channel with no <item> is valid and means "no update
+  available", so shipping builds that point here behave correctly before the
+  first release exists. Anything else (a 404, malformed XML) surfaces to users
+  as an update error.
+
+  To publish a release, add an <item> with a sparkle:edSignature produced by
+  Sparkle's sign_update against the DMG. Never hand-write that signature.
+-->
+<rss version="2.0" xmlns:sparkle="http://www.andymatuschak.org/xml-namespaces/sparkle">
+  <channel>
+    <title>Ensemble</title>
+    <link>https://ensemble.jungwooyang.com/appcast.xml</link>
+    <description>Updates for Ensemble.</description>
+    <language>en</language>
+  </channel>
+</rss>
