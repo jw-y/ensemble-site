@@ -56,6 +56,11 @@
   .req { font-size: 0.85rem; color: var(--muted); margin-top: 14px; }
 
   section { padding: 44px 0; border-top: 1px solid var(--line); }
+  /* The capture already carries its own drop shadow and transparent margin, so it
+     needs no frame or border — adding one would double the edge. Displayed at half
+     its pixel width so it stays crisp on Retina. */
+  .shot { border-top: none; padding-top: 8px; text-align: center; }
+  .shot img { width: 100%; max-width: 330px; height: auto; }
   h2 { font-size: 1.35rem; margin: 0 0 18px; letter-spacing: -0.01em; }
   h3 { font-size: 1rem; margin: 0 0 6px; }
   p { margin: 0 0 14px; }
@@ -88,6 +93,10 @@
     </div>
     <p class="req">macOS 14 or later · Apple Silicon · 14-day free trial, no account needed</p>
   </header>
+
+  <section class="shot">
+    <img src="/screenshots/manager.png" alt="The Ensemble window listing six profiles — Personal, Research and Work on ChatGPT, Personal and Family on Claude, and Personal on Gemini — with green dots marking the ones currently running.">
+  </section>
 
   <section>
     <h2>One Mac, several accounts</h2>
