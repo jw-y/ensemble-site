@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Privacy — Ensemble</title>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="What Ensemble does and doesn't collect. Short version: nothing leaves your Mac except a license check and an update check.">
+<style>
+  :root {
+    --bg: #fbfbfd; --panel: #ffffff; --text: #1a1a1f;
+    --muted: #62626b; --line: #e3e3e8; --accent: #4f46e5;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #101014; --panel: #18181d; --text: #f2f2f5;
+      --muted: #a0a0aa; --line: #2a2a32; --accent: #7c74f5;
+    }
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; background: var(--bg); color: var(--text);
+    font: 16px/1.7 -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", system-ui, sans-serif;
+    -webkit-font-smoothing: antialiased;
+  }
+  .wrap { max-width: 680px; margin: 0 auto; padding: 60px 22px 80px; }
+  a { color: var(--accent); }
+  h1 { font-size: 2rem; letter-spacing: -0.02em; margin: 0 0 6px; }
+  .updated { color: var(--muted); font-size: 0.88rem; margin: 0 0 34px; }
+  h2 { font-size: 1.15rem; margin: 34px 0 10px; }
+  p, li { margin: 0 0 12px; }
+  ul { padding-left: 1.15em; }
+  .lead { background: var(--panel); border: 1px solid var(--line); border-radius: 14px; padding: 18px; }
+  footer { margin-top: 46px; padding-top: 20px; border-top: 1px solid var(--line); color: var(--muted); font-size: 0.85rem; }
+  footer a { color: var(--muted); }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <h1>Privacy</h1>
+  <p class="updated">Last updated 3 August 2026</p>
+
+  <p class="lead"><strong>Short version:</strong> Ensemble runs on your Mac and keeps your data there. It has no accounts, no analytics, and no telemetry. It makes exactly two kinds of network request: checking for updates, and validating a license key if you buy one.</p>
+
+  <h2>What stays on your Mac</h2>
+  <p>Your profile list — names, colors, which service each uses — is stored in <code>~/Library/Application Support/Ensemble</code>. Each profile's login data is stored in its own directory there and is written by ChatGPT, Claude, or Chrome, not by Ensemble.</p>
+  <p>Ensemble never reads, transmits, or has access to your conversations, prompts, files, or the accounts you sign in to. It launches the apps you already have and points them at separate data directories; what happens inside those apps is between you and their makers.</p>
+
+  <h2>Update checks</h2>
+  <p>Ensemble uses Sparkle to check for new versions by fetching a file from <code>ensemble.jungwooyang.com</code>, which is hosted on GitHub Pages. That request includes your IP address and the app version, as any web request does. No identifier for you or your Mac is sent, and nothing is stored by us. You can turn automatic checks off in Settings.</p>
+
+  <h2>License activation</h2>
+  <p>If you buy a license, activating it sends your license key and your Mac's name to Lemon Squeezy, our payment and licensing provider. The Mac name is shown in your purchase portal so you can tell which machines are activated and deactivate one when you replace it. The activation is then stored in your Mac's Keychain, and Ensemble does not need to contact anyone again to keep working.</p>
+  <p>During the free trial, no network request of this kind is made at all.</p>
+
+  <h2>Purchases</h2>
+  <p>Purchases are handled by <a href="https://www.lemonsqueezy.com/">Lemon Squeezy</a>, who act as merchant of record. They collect what a sale requires — your name, email address, payment details, and the country used for tax — under their own <a href="https://www.lemonsqueezy.com/privacy">privacy policy</a>. We receive your email address and order details so we can provide support and reissue a key if you lose it. Your payment card details are never sent to us and we cannot see them.</p>
+
+  <h2>Email</h2>
+  <p>If you email us for support, we keep that correspondence so we can help you and remember the context if you write again. We don't add you to a mailing list, and there isn't one.</p>
+
+  <h2>What we don't do</h2>
+  <ul>
+    <li>No analytics, crash reporting, or usage tracking of any kind</li>
+    <li>No advertising, and no sale or sharing of personal data</li>
+    <li>No account to create, and no password to store</li>
+  </ul>
+
+  <h2>Your rights</h2>
+  <p>You can ask what we hold about you, ask for a copy, or ask us to delete it, by emailing <a href="mailto:jwyang0213@gmail.com">jwyang0213@gmail.com</a>. In practice this amounts to your purchase record and any support email, since nothing else reaches us. Purchase records are held by Lemon Squeezy, who must also keep some of them for tax purposes; requests about those can go to them directly or through us.</p>
+
+  <h2>Children</h2>
+  <p>Ensemble isn't directed at children and we don't knowingly collect anything from them.</p>
+
+  <h2>Changes</h2>
+  <p>If this policy changes, the date at the top changes with it. Material changes will be noted on this page rather than made quietly.</p>
+
+  <h2>Contact</h2>
+  <p>Ensemble is made by Jungwoo Yang. Questions about privacy, or anything else, go to <a href="mailto:jwyang0213@gmail.com">jwyang0213@gmail.com</a>.</p>
+
+  <footer>
+    <p><a href="/">← Ensemble</a></p>
+    <p>Not affiliated with, endorsed by, or sponsored by Anthropic, OpenAI, or Google.</p>
+  </footer>
+
+</div>
+</body>
+</html>

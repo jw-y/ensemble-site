@@ -1,6 +1,149 @@
 <!doctype html>
+<html lang="en">
+<head>
 <meta charset="utf-8">
-<title>Ensemble</title>
+<title>Ensemble — Multiple isolated AI profiles for macOS</title>
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<h1>Ensemble</h1>
-<p>Run multiple isolated profiles of ChatGPT, Claude, and Gemini on macOS.</p>
+<meta name="description" content="Run multiple isolated profiles of ChatGPT, Claude, and Gemini on your Mac — each with its own login. Work, personal, and client accounts, signed in at once.">
+<meta property="og:title" content="Ensemble — Multiple isolated AI profiles for macOS">
+<meta property="og:description" content="Run ChatGPT, Claude, and Gemini with separate logins side by side. One-time $25.">
+<meta property="og:type" content="website">
+<style>
+  :root {
+    --bg: #fbfbfd;
+    --panel: #ffffff;
+    --text: #1a1a1f;
+    --muted: #62626b;
+    --line: #e3e3e8;
+    --accent: #4f46e5;
+    --accent-text: #ffffff;
+    --radius: 14px;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #101014;
+      --panel: #18181d;
+      --text: #f2f2f5;
+      --muted: #a0a0aa;
+      --line: #2a2a32;
+      --accent: #7c74f5;
+      --accent-text: #0e0e12;
+    }
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    font: 16px/1.65 -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", system-ui, sans-serif;
+    -webkit-font-smoothing: antialiased;
+  }
+  .wrap { max-width: 760px; margin: 0 auto; padding: 0 22px; }
+  a { color: var(--accent); }
+  code { font-size: 0.9em; }
+
+  header { padding: 84px 0 56px; text-align: center; }
+  h1 { font-size: clamp(2.4rem, 7vw, 3.4rem); line-height: 1.1; margin: 0 0 14px; letter-spacing: -0.02em; }
+  .tagline { font-size: clamp(1.05rem, 2.6vw, 1.3rem); color: var(--muted); margin: 0 auto 30px; max-width: 34em; }
+
+  .cta { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
+  .btn {
+    display: inline-block; padding: 13px 26px; border-radius: 999px;
+    text-decoration: none; font-weight: 600; border: 1px solid transparent;
+  }
+  .btn-primary { background: var(--accent); color: var(--accent-text); }
+  .btn-secondary { border-color: var(--line); color: var(--text); background: var(--panel); }
+  .req { font-size: 0.85rem; color: var(--muted); margin-top: 14px; }
+
+  section { padding: 44px 0; border-top: 1px solid var(--line); }
+  h2 { font-size: 1.35rem; margin: 0 0 18px; letter-spacing: -0.01em; }
+  h3 { font-size: 1rem; margin: 0 0 6px; }
+  p { margin: 0 0 14px; }
+  .muted { color: var(--muted); }
+
+  .grid { display: grid; gap: 16px; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); }
+  .card { background: var(--panel); border: 1px solid var(--line); border-radius: var(--radius); padding: 18px; }
+  .card p { margin: 0; color: var(--muted); font-size: 0.94rem; }
+
+  .price { display: flex; align-items: baseline; gap: 10px; margin-bottom: 6px; }
+  .price strong { font-size: 2.1rem; letter-spacing: -0.02em; }
+  ul { margin: 0 0 18px; padding-left: 1.15em; color: var(--muted); }
+  li { margin-bottom: 6px; }
+
+  footer { padding: 40px 0 60px; border-top: 1px solid var(--line); color: var(--muted); font-size: 0.85rem; }
+  footer a { color: var(--muted); }
+</style>
+</head>
+<body>
+
+<div class="wrap">
+
+  <header>
+    <h1>Ensemble</h1>
+    <p class="tagline">Run multiple isolated profiles of ChatGPT, Claude, and Gemini on your Mac — each with its own login, all signed in at once.</p>
+    <div class="cta">
+      <!-- Updated automatically on release by scripts/make-appcast.sh -->
+      <a class="btn btn-primary" href="/releases/Ensemble-0.2.0.dmg">Download free trial</a>
+      <a class="btn btn-secondary" href="https://ensembleapp.lemonsqueezy.com/checkout/buy/510dc851-33a2-43af-b875-6aba2bbbebd5">Buy a license — $25</a>
+    </div>
+    <p class="req">macOS 14 or later · Apple Silicon · 14-day free trial, no account needed</p>
+  </header>
+
+  <section>
+    <h2>One Mac, several accounts</h2>
+    <p>Signing out and back in to move between a work account and a personal one is a bad way to spend the day. Ensemble keeps each account in its own profile — named, color-coded, permanently signed in — and launches them side by side.</p>
+    <div class="grid">
+      <div class="card">
+        <h3>ChatGPT</h3>
+        <p>Each profile gets its own <code>CODEX_HOME</code>, so logins and sessions stay separate.</p>
+      </div>
+      <div class="card">
+        <h3>Claude</h3>
+        <p>Each profile runs with its own data directory — separate accounts, running together.</p>
+      </div>
+      <div class="card">
+        <h3>Gemini</h3>
+        <p>Opens as its own app window through Chrome, with a per-profile browser profile.</p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>How it works</h2>
+    <p>Ensemble launches the real apps you already have installed. It isn't a wrapper, a web view, or a repackaged copy — each profile simply gets its own data directory, the same mechanism the apps use themselves. Your logins stay on your Mac.</p>
+    <p class="muted">A menu-bar switcher lists every profile, shows which are running, and brings one forward with a click. Ensemble stays out of the way otherwise.</p>
+  </section>
+
+  <section>
+    <h2>Pricing</h2>
+    <div class="price"><strong>$25</strong> <span class="muted">one time</span></div>
+    <ul>
+      <li>14-day free trial — fully functional, no account, no card</li>
+      <li>Use on up to 5 Macs</li>
+      <li>Free updates within 1.x</li>
+      <li>Automatic updates, signed and notarized by Apple</li>
+    </ul>
+    <div class="cta" style="justify-content:flex-start">
+      <a class="btn btn-primary" href="https://ensembleapp.lemonsqueezy.com/checkout/buy/510dc851-33a2-43af-b875-6aba2bbbebd5">Buy a license</a>
+      <a class="btn btn-secondary" href="/releases/Ensemble-0.2.0.dmg">Try it first</a>
+    </div>
+  </section>
+
+  <section>
+    <h2>Requirements</h2>
+    <ul>
+      <li>macOS 14 (Sonoma) or later</li>
+      <li>Apple Silicon — Intel Macs are not supported</li>
+      <li>The apps you want to manage, already installed: ChatGPT, Claude, and Google Chrome for Gemini</li>
+      <li>Each profile signs in to its own account. Ensemble doesn't share, pool, or bypass accounts.</li>
+    </ul>
+  </section>
+
+  <footer>
+    <p>Questions or trouble? <a href="mailto:jwyang0213@gmail.com">jwyang0213@gmail.com</a> · <a href="/privacy.html">Privacy</a></p>
+    <p>Not affiliated with, endorsed by, or sponsored by Anthropic, OpenAI, or Google. ChatGPT, Claude, and Gemini are trademarks of their respective owners.</p>
+  </footer>
+
+</div>
+</body>
+</html>
