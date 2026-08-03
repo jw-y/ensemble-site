@@ -2,13 +2,17 @@
 <!--
   Sparkle appcast for Ensemble.
 
-  Intentionally empty: a channel with no <item> is valid and means "no update
-  available", so shipping builds that point here behave correctly before the
-  first release exists. Anything else (a 404, malformed XML) surfaces to users
-  as an update error.
+  GENERATED FILE — do not edit by hand. Produced by scripts/make-appcast.sh in
+  the Ensemble repo, which runs generate_appcast over the whole releases/ dir and
+  overwrites everything below this comment.
 
-  To publish a release, add an <item> with a sparkle:edSignature produced by
-  Sparkle's sign_update against the DMG. Never hand-write that signature.
+  Older versions stay in the feed on purpose: a user on any prior build needs an
+  entry they can upgrade from. The .delta files are binary patches Sparkle uses
+  instead of a full download when the user's exact previous build matches.
+
+  Every sparkle:edSignature is made with the EdDSA private key in the login
+  keychain of the build Mac. Installed copies verify against SUPublicEDKey and
+  reject anything that doesn't match, so that key is unrecoverable if lost.
 -->
 <rss xmlns:sparkle="http://www.andymatuschak.org/xml-namespaces/sparkle" version="2.0">
     <channel>
