@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <!--
   Sparkle appcast for Ensemble.
 
@@ -10,11 +10,20 @@
   To publish a release, add an <item> with a sparkle:edSignature produced by
   Sparkle's sign_update against the DMG. Never hand-write that signature.
 -->
-<rss version="2.0" xmlns:sparkle="http://www.andymatuschak.org/xml-namespaces/sparkle">
-  <channel>
-    <title>Ensemble</title>
-    <link>https://ensemble.jungwooyang.com/appcast.xml</link>
-    <description>Updates for Ensemble.</description>
-    <language>en</language>
-  </channel>
+<rss xmlns:sparkle="http://www.andymatuschak.org/xml-namespaces/sparkle" version="2.0">
+    <channel>
+        <title>Ensemble</title>
+        <link>https://ensemble.jungwooyang.com/appcast.xml</link>
+        <description>Updates for Ensemble.</description>
+        <language>en</language>
+        <item>
+            <title>0.1.0</title>
+            <pubDate>Mon, 03 Aug 2026 16:04:47 +0900</pubDate>
+            <sparkle:version>1</sparkle:version>
+            <sparkle:shortVersionString>0.1.0</sparkle:shortVersionString>
+            <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
+            <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
+            <enclosure url="https://ensemble.jungwooyang.com/releases/Ensemble-0.1.0.dmg" length="2263229" type="application/octet-stream" sparkle:edSignature="ZXPsqzrQiJJI8JOBu7zg6TO0P7RhEJ05vS+H49aKuqDjRyhJgLXr4w5L923WqUHAub7bICzKUF3BQgRxNEQXDA=="/>
+        </item>
+    </channel>
 </rss>
