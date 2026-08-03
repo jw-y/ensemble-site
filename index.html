@@ -38,15 +38,30 @@
     font: 16px/1.65 -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", system-ui, sans-serif;
     -webkit-font-smoothing: antialiased;
   }
-  .wrap { max-width: 760px; margin: 0 auto; padding: 0 22px; }
+  .wrap { max-width: 900px; margin: 0 auto; padding: 0 22px; }
   a { color: var(--accent); }
   code { font-size: 0.9em; }
 
-  header { padding: 84px 0 56px; text-align: center; }
-  h1 { font-size: clamp(2.4rem, 7vw, 3.4rem); line-height: 1.1; margin: 0 0 14px; letter-spacing: -0.02em; }
-  .tagline { font-size: clamp(1.05rem, 2.6vw, 1.3rem); color: var(--muted); margin: 0 auto 30px; max-width: 34em; }
+  /* Two columns wide enough for both, one column below that. The breakpoint is
+     where the text column would otherwise squeeze under ~30em and start wrapping
+     the headline badly. */
+  header { padding: 72px 0 52px; }
+  .hero {
+    display: grid; gap: 40px; align-items: center;
+    grid-template-columns: 1fr minmax(0, 265px);
+  }
+  .hero-shot { justify-self: end; }
+  .hero-shot img { width: 100%; max-width: 265px; height: auto; display: block; }
+  @media (max-width: 720px) {
+    .hero { grid-template-columns: 1fr; text-align: center; justify-items: center; }
+    .hero-shot { justify-self: center; }
+    .cta { justify-content: center; }
+  }
 
-  .cta { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
+  h1 { font-size: clamp(2.3rem, 6vw, 3.2rem); line-height: 1.08; margin: 0 0 14px; letter-spacing: -0.02em; }
+  .tagline { font-size: clamp(1.02rem, 2.4vw, 1.22rem); color: var(--muted); margin: 0 0 28px; max-width: 24em; }
+
+  .cta { display: flex; gap: 12px; flex-wrap: wrap; }
   .btn {
     display: inline-block; padding: 13px 26px; border-radius: 999px;
     text-decoration: none; font-weight: 600; border: 1px solid transparent;
@@ -85,6 +100,8 @@
 <div class="wrap">
 
   <header>
+   <div class="hero">
+    <div>
     <h1>Ensemble</h1>
     <p class="tagline">Run multiple isolated profiles of ChatGPT, Claude, and Gemini on your Mac — each with its own login, all signed in at once.</p>
     <div class="cta">
@@ -93,11 +110,13 @@
       <a class="btn btn-secondary" href="https://ensembleapp.lemonsqueezy.com/checkout/buy/510dc851-33a2-43af-b875-6aba2bbbebd5">Buy a license — $25</a>
     </div>
     <p class="req">macOS 14 or later · Apple Silicon · 14-day free trial, no account needed</p>
-  </header>
+    </div>
 
-  <section class="shot">
-    <img src="/screenshots/manager.png" alt="The Ensemble window listing six profiles — Personal, Research and Work on ChatGPT, Personal and Family on Claude, and Personal on Gemini — with green dots marking the ones currently running.">
-  </section>
+    <div class="hero-shot">
+      <img src="/screenshots/manager.png" alt="The Ensemble window listing six profiles — Personal, Research and Work on ChatGPT, Personal and Family on Claude, and Personal on Gemini — with green dots marking the ones currently running.">
+    </div>
+   </div>
+  </header>
 
   <section>
     <h2>One Mac, several accounts</h2>
