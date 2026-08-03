@@ -56,11 +56,16 @@
   .req { font-size: 0.85rem; color: var(--muted); margin-top: 14px; }
 
   section { padding: 44px 0; border-top: 1px solid var(--line); }
-  /* The capture already carries its own drop shadow and transparent margin, so it
-     needs no frame or border — adding one would double the edge. Displayed at half
-     its pixel width so it stays crisp on Retina. */
+  /* Shadow-free capture, so the page supplies the shadow and rounded corners the
+     window would otherwise have — without them it reads as a flat rectangle pasted
+     onto the page, especially in light mode. Shown at half its pixel width to stay
+     crisp on Retina. */
   .shot { border-top: none; padding-top: 8px; text-align: center; }
-  .shot img { width: 100%; max-width: 330px; height: auto; }
+  .shot img {
+    width: 100%; max-width: 300px; height: auto;
+    border-radius: 11px;
+    box-shadow: 0 18px 40px rgba(0,0,0,.22), 0 2px 6px rgba(0,0,0,.14);
+  }
   h2 { font-size: 1.35rem; margin: 0 0 18px; letter-spacing: -0.01em; }
   h3 { font-size: 1rem; margin: 0 0 6px; }
   p { margin: 0 0 14px; }
