@@ -21,6 +21,15 @@
         <description>Updates for Ensemble.</description>
         <language>en</language>
         <item>
+            <title>0.2.0</title>
+            <pubDate>Mon, 03 Aug 2026 17:18:17 +0900</pubDate>
+            <sparkle:version>3</sparkle:version>
+            <sparkle:shortVersionString>0.2.0</sparkle:shortVersionString>
+            <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
+            <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
+            <enclosure url="https://ensemble.jungwooyang.com/releases/Ensemble-0.2.0.dmg" length="2310630" type="application/octet-stream" sparkle:edSignature="Ez2L1mif/+1CL0v0Ggrk8yubXnnvTcSPA8HqlqoSUkaiB8MV2ZxdE7J5yxgpiPBLcGrVu6srJ7pFyrL5Hc4sCA=="/>
+        </item>
+        <item>
             <title>0.1.1</title>
             <pubDate>Mon, 03 Aug 2026 16:12:39 +0900</pubDate>
             <sparkle:version>2</sparkle:version>
