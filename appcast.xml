@@ -3,6 +3,18 @@
     <channel>
         <title>Ensemble</title>
         <item>
+            <title>0.1.0</title>
+            <pubDate>Wed, 12 Aug 2026 01:16:51 +0900</pubDate>
+            <sparkle:version>6</sparkle:version>
+            <sparkle:shortVersionString>0.1.0</sparkle:shortVersionString>
+            <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
+            <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
+            <enclosure url="https://ensemble.jungwooyang.com/releases/Ensemble-0.1.0.dmg" length="2314686" type="application/octet-stream" sparkle:edSignature="lUbNuEwV5/RRx/W3n07gicOEdRBNVS2/1eCamTMlOu1wiTnRHZyGuI0a/1sUQr+4lm44wZD0GtmFPqQjcDONDQ=="/>
+            <sparkle:deltas>
+                <enclosure url="https://ensemble.jungwooyang.com/releases/Ensemble6-5.delta" sparkle:deltaFrom="5" length="48178" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977808" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="37TSDlCkzxS0jitupyxTc/6zd4IWD3o5VR/GucDnSKMBCdcexalgJ3e63TxhnXiFL3i7ACL3n/tVHV11fDa9BA=="/>
+            </sparkle:deltas>
+        </item>
+        <item>
             <title>0.2.2</title>
             <pubDate>Wed, 12 Aug 2026 01:02:21 +0900</pubDate>
             <sparkle:version>5</sparkle:version>
