@@ -1,25 +1,7 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<!--
-  Sparkle appcast for Ensemble.
-
-  GENERATED FILE — do not edit by hand. Produced by scripts/make-appcast.sh in
-  the Ensemble repo, which runs generate_appcast over the whole releases/ dir and
-  overwrites everything below this comment.
-
-  Older versions stay in the feed on purpose: a user on any prior build needs an
-  entry they can upgrade from. The .delta files are binary patches Sparkle uses
-  instead of a full download when the user's exact previous build matches.
-
-  Every sparkle:edSignature is made with the EdDSA private key in the login
-  keychain of the build Mac. Installed copies verify against SUPublicEDKey and
-  reject anything that doesn't match, so that key is unrecoverable if lost.
--->
+<?xml version="1.0" standalone="yes"?>
 <rss xmlns:sparkle="http://www.andymatuschak.org/xml-namespaces/sparkle" version="2.0">
     <channel>
         <title>Ensemble</title>
-        <link>https://ensemble.jungwooyang.com/appcast.xml</link>
-        <description>Updates for Ensemble.</description>
-        <language>en</language>
         <item>
             <title>0.2.2</title>
             <pubDate>Wed, 12 Aug 2026 01:02:21 +0900</pubDate>
@@ -28,31 +10,6 @@
             <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
             <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
             <enclosure url="https://ensemble.jungwooyang.com/releases/Ensemble-0.2.2.dmg" length="2312212" type="application/octet-stream" sparkle:edSignature="cjGE1E4nvpZ7xV6o1nkGiA8hmxnEFQHeKKpzjHCaI2LHHuNQhSAUG3dZGV8ZzgNvrETDB3bRg0slxZylj4QaBA=="/>
-            <sparkle:deltas>
-                <enclosure url="https://ensemble.jungwooyang.com/releases/Ensemble5-4.delta" sparkle:deltaFrom="4" length="11430" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977808" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="N4sadGGfm3Q1lIg7+7Jg4iQjZqQoRp7x2o+0lKQXa1yfCpcdsSnjSisIiku0kfz1+G/TNt0pVpa0mINsKBsaCQ=="/>
-                <enclosure url="https://ensemble.jungwooyang.com/releases/Ensemble5-3.delta" sparkle:deltaFrom="3" length="60098" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977808" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="GyYY5Vqx0rP4X7lwZmQyVia1n6wujXCAGkOCHl8Z+YO8Ux1IAAYxI4Ow+vh6ChrHsReeaDT5jdRiR+FoQSx0Cw=="/>
-            </sparkle:deltas>
-        </item>
-        <item>
-            <title>0.2.1</title>
-            <pubDate>Wed, 12 Aug 2026 00:55:19 +0900</pubDate>
-            <sparkle:version>4</sparkle:version>
-            <sparkle:shortVersionString>0.2.1</sparkle:shortVersionString>
-            <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
-            <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
-            <enclosure url="https://ensemble.jungwooyang.com/releases/Ensemble-0.2.1.dmg" length="2312553" type="application/octet-stream" sparkle:edSignature="ZonEMSN3V/WR7AIxOyZz+vGxvpC+pWMWKalvwr89Fq1GYvIofUPLVK8+OrYdvMCwLZxCP6+aYOTceLyWbpr3Dg=="/>
-            <sparkle:deltas>
-                <enclosure url="https://ensemble.jungwooyang.com/releases/Ensemble4-3.delta" sparkle:deltaFrom="3" length="59998" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977808" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="jxdZ+24uS4ePcqbAo4PtrnBf1uP/Zv+HeDAFt9wZqZyw1znUnhh9Gw6TbBRZ3kKVos9C1H1F3LsabbidSS14Cg=="/>
-            </sparkle:deltas>
-        </item>
-        <item>
-            <title>0.2.0</title>
-            <pubDate>Mon, 03 Aug 2026 17:18:17 +0900</pubDate>
-            <sparkle:version>3</sparkle:version>
-            <sparkle:shortVersionString>0.2.0</sparkle:shortVersionString>
-            <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
-            <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
-            <enclosure url="https://ensemble.jungwooyang.com/releases/Ensemble-0.2.0.dmg" length="2310630" type="application/octet-stream" sparkle:edSignature="Ez2L1mif/+1CL0v0Ggrk8yubXnnvTcSPA8HqlqoSUkaiB8MV2ZxdE7J5yxgpiPBLcGrVu6srJ7pFyrL5Hc4sCA=="/>
         </item>
     </channel>
 </rss>
