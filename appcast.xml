@@ -21,6 +21,19 @@
         <description>Updates for Ensemble.</description>
         <language>en</language>
         <item>
+            <title>0.2.2</title>
+            <pubDate>Wed, 12 Aug 2026 01:02:21 +0900</pubDate>
+            <sparkle:version>5</sparkle:version>
+            <sparkle:shortVersionString>0.2.2</sparkle:shortVersionString>
+            <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
+            <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
+            <enclosure url="https://ensemble.jungwooyang.com/releases/Ensemble-0.2.2.dmg" length="2312212" type="application/octet-stream" sparkle:edSignature="cjGE1E4nvpZ7xV6o1nkGiA8hmxnEFQHeKKpzjHCaI2LHHuNQhSAUG3dZGV8ZzgNvrETDB3bRg0slxZylj4QaBA=="/>
+            <sparkle:deltas>
+                <enclosure url="https://ensemble.jungwooyang.com/releases/Ensemble5-4.delta" sparkle:deltaFrom="4" length="11430" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977808" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="N4sadGGfm3Q1lIg7+7Jg4iQjZqQoRp7x2o+0lKQXa1yfCpcdsSnjSisIiku0kfz1+G/TNt0pVpa0mINsKBsaCQ=="/>
+                <enclosure url="https://ensemble.jungwooyang.com/releases/Ensemble5-3.delta" sparkle:deltaFrom="3" length="60098" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977808" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="GyYY5Vqx0rP4X7lwZmQyVia1n6wujXCAGkOCHl8Z+YO8Ux1IAAYxI4Ow+vh6ChrHsReeaDT5jdRiR+FoQSx0Cw=="/>
+            </sparkle:deltas>
+        </item>
+        <item>
             <title>0.2.1</title>
             <pubDate>Wed, 12 Aug 2026 00:55:19 +0900</pubDate>
             <sparkle:version>4</sparkle:version>
