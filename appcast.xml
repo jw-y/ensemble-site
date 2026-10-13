@@ -3,6 +3,19 @@
     <channel>
         <title>Ensemble</title>
         <item>
+            <title>0.1.1</title>
+            <pubDate>Tue, 13 Oct 2026 15:09:22 +0900</pubDate>
+            <sparkle:version>7</sparkle:version>
+            <sparkle:shortVersionString>0.1.1</sparkle:shortVersionString>
+            <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
+            <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
+            <sparkle:releaseNotesLink>https://ensemble.jungwooyang.com/Ensemble-0.1.1.html</sparkle:releaseNotesLink>
+            <enclosure url="https://ensemble.jungwooyang.com/releases/Ensemble-0.1.1.dmg" length="2580876" type="application/octet-stream" sparkle:edSignature="yiZauGu41yexwKSwDHy7Wy+v2BLWUbFr7dw5BcGImTfiFgNq+y+72NL7+mdHGbLmlaQVAozRDqMmtOLs1vZPDA=="/>
+            <sparkle:deltas>
+                <enclosure url="https://ensemble.jungwooyang.com/releases/Ensemble7-6.delta" sparkle:deltaFrom="6" length="76854" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977808" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="emJ+RTzfwXk9D4oyiEIUuBh3QaDM7OFBhGKf5Ir2d8AXnezyrH9ZRGvqbCyXzaDLGwXT+N2b/tZkLT0zoOEQDA=="/>
+            </sparkle:deltas>
+        </item>
+        <item>
             <title>0.1.0</title>
             <pubDate>Wed, 12 Aug 2026 01:16:51 +0900</pubDate>
             <sparkle:version>6</sparkle:version>
